@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+
+
+    />
+    <script src="assets/js/cadastrar.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Tech Storage</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper indigo darken-4">
+        <a href="/" class="brand-logo">Tec Storage</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="index.html">Equipamentos</a></li>
+          <li class="active">
+            <a href="cadastrar.html">Cadastrar</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <h5 class="center">Cadastrar produto</h5>
+      <form action="">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="nomeProduto" type="text" class="validate" minlength="5" />
+            <label for="nomeProduto">Nome do Produto</label>
+            <span class="helper-text" data-error="Nome muito curto. Preencha com pelo menos 5 caracteres." data-success="">digite o nome do produto</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="descProduto" type="text" class="validate" minlength="15" />
+            <label for="descProduto">Descrição do Produto</label>
+            <span class="helper-text" data-error="Descrição muito curta. Preencha com pelo menos 15 caracteres." data-success="">digite a descrição do produto</span>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="input-field col s6">
+              <input id="precoProduto" type="number" step="any" class="validate" min="5">
+              <label for="precoProduto">Preço do Produto</label>
+              <span class="helper-text" data-error="Preço inválido." data-success="">digite o preço do produto</span>
+            </div>
+
+            <div class="input-field col s6">
+              <input id="qtdProduto" type="number"  min="1" max="100"  class="validate">
+              <label for="qtdProduto">Quantidade do Produto</label>
+              <span class="helper-text" data-error="Quantidade inválida." data-success="">digite o quantidade do produto</span>
+            </div>
+          </div>
+
+
+          <label for="categorias">Categorias</label>
+          <div class="input-field col s12 m6">
+          <select id="categoriasProdutos" class="browser-default" class="validate">
+            <option value="" disabled selected>Selecione a categoria do produto</option>
+            <option id="ctHardware" value="1">Hardware </option>
+            <option id="ctPeriferico" value="2">Periféricos </option>
+            <option id="ctCelSmart" value="3">Celular e Smartphone</option>
+            <option id="ctTV"value="4">TV</option>
+            <option id="ctCPU"value="5">Computadores</option>
+            
+          </select>
+          </div>    
+
+          <div class="spacer"></div>
+          <div class="row">
+            <div class="col">
+             
+              
+              <button id="btnCancelar" class="btn grey">cancelar</button>
+            </div>
+            <div class="col">
+            
+              <button id="btnCadastrar" class="btn">salvar</button>
+            </div>
+          </div>
+
+          
+
+      </form>
+    </main>
+  </body>
+</html>
